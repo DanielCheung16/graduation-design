@@ -1,0 +1,34 @@
+# === Vivado generated folders ===
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.webtalk/
+*.Xil/
+
+# === Vivado temporary and log files ===
+*.log
+*.jou
+*.str
+*.xml
+*.wdb
+*.xpr~
+*.bak
+*.tmp
+*~
+
+# === Simulation waveform data ===
+waves/
+
+# === SDK & hardware export (if unused) ===
+*.sdk/
+*.hdf
+*.ltx
+
+# === Optional: crash logs ===
+crash_report_*
+
+# === Optional: user-generated temp folders ===
+*.backup/
+*.data/
