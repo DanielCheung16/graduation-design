@@ -27,8 +27,12 @@ module mmio_bus(
     input  wire  [31:0] dinb_vga_ctrl,
     output wire  [31:0] doutb_vga_ctrl,
     //to keyboard
-    input   wire        ps2_clk,
-    input   wire        ps2_data
+    input  wire         up,
+    input  wire         down,
+    input  wire         left,
+    input  wire         right
+    // input   wire        ps2_clk,
+    // input   wire        ps2_data
     );
 //-------------------------------------地址映射-----------------------------------
     localparam FB_BASE = 32'ha1000000;
@@ -166,18 +170,29 @@ module mmio_bus(
     );
     //---------------------------keyboard部分--------------------------------------------
     assign  mmio_en = device_num[3];
-    
-    ky u_ky(
-        .clk_cpu  	(clock_cpu  ),
-        .reset    	(rst_cpu    ),
-        .ps2_clk  	(ps2_clk   ),
-        .ps2_data 	(ps2_data  ),
-        .mmio_en  	(mmio_en    ),
-        .addra    	(Addr_cpu   ),
-        .data_out 	(dout_ky    )
-    );
-    
 
+    virtual_ky u_virtual_ky(
+        .clk_cpu  	(clock_cpu      ),
+        .rst      	(rst_cpu        ),
+        .up       	(up             ),
+        .down     	(down           ),
+        .left     	(left           ),
+        .right    	(right          ),
+        .mmio_en  	(mmio_en        ),
+        .addra    	(Addr_cpu       ),
+        .data_out 	(dout_ky        )
+    );  
+    
+    // ky u_ky(
+    //     .clk_cpu  	(clock_cpu  ),
+    //     .reset    	(rst_cpu    ),
+    //     .ps2_clk  	(ps2_clk   ),
+    //     .ps2_data 	(ps2_data  ),
+    //     .mmio_en  	(mmio_en    ),
+    //     .addra    	(Addr_cpu   ),
+    //     .data_out 	(dout_ky    )
+    // );
+    
     
     //--------------------------给CPU返回数据---------------------------------------------
     reg [DEVICE_NUM - 1:0]   device_num1;        //需要将device_num多打一拍

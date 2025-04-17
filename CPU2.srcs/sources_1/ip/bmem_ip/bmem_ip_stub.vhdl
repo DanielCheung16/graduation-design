@@ -1,9 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Apr 14 18:20:08 2025
+-- Date        : Mon Apr 14 17:34:48 2025
 -- Host        : DESKTOP-GAA9OIO running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub E:/FPGA/Senior1/CPU2/CPU2.srcs/sources_1/ip/bmem_ip/bmem_ip_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top bmem_ip -prefix
+--               bmem_ip_ bmem_ip_stub.vhdl
 -- Design      : bmem_ip
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2

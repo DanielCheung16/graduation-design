@@ -8,11 +8,15 @@ module top(
     output wire [2:0]   tmds_data_p ,
     output wire [2:0]   tmds_data_n, //HDMI图像差分信号
     //PS2
-    input  wire         ps2_clk,
-    input  wire         ps2_data,
+    input  wire         up,
+    input  wire         down,
+    input  wire         left,
+    input  wire         right,
+    // input  wire         ps2_clk,
+    // input  wire         ps2_data,
     //led
     output              led_rst,
-    output              led_ky
+    output      [3:0]   led_key
     );
 //*****************************************************************
 //      Internal Signals
@@ -72,8 +76,12 @@ module top(
         .doutb_vga_ctrl 	(ctrl_data       ),
         //keyboard
         //一下都还未接线：
-        .ps2_clk        	(ps2_clk         ),
-        .ps2_data       	(ps2_data        )
+        .up             	(up              ),
+        .down           	(down            ),
+        .left           	(left            ),
+        .right          	(right           )
+        // .ps2_clk        	(ps2_clk         ),
+        // .ps2_data       	(ps2_data        )
     );
     
     vga2hdmi u_vga2hdmi(
@@ -113,5 +121,8 @@ module top(
     );
 //---------------------------DEBUG--------------------------------
     assign led_rst = sys_rst_cpu;
-    assign led_ky = ps2_clk;
+    assign led_key[0] = up;
+    assign led_key[1] = down;
+    assign led_key[2] = left;
+    assign led_key[3] = right;
 endmodule

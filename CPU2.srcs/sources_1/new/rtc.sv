@@ -1,7 +1,7 @@
 module rtc#(
     parameter CLK_FREQ_HZ = 50000000,  // 系统时钟频率（默认 50MHz）
 //   parameter CNT_END     = (CLK_FREQ_HZ / 1000000 )
-    parameter CNT_END     = (CLK_FREQ_HZ / 100000 )     //10us
+    parameter CNT_END     = (CLK_FREQ_HZ / 1000000 )     //10us
   )(
     input               clock,
     input               reset,

@@ -11,8 +11,12 @@ module core(
     input  wire  [31:0] dinb_vga_ctrl,
     output wire  [31:0] doutb_vga_ctrl,
     
-    input  wire         ps2_clk,
-    input  wire         ps2_data
+    input  wire         up,
+    input  wire         down,
+    input  wire         left,
+    input  wire         right
+    // input  wire         ps2_clk,
+    // input  wire         ps2_data
     );
 
     // output declaration of module cpu
@@ -110,8 +114,12 @@ module core(
         .dinb_vga_ctrl  	(dinb_vga_ctrl   ),
         .doutb_vga_ctrl 	(doutb_vga_ctrl  ),
         //to keyboard
-        .ps2_clk        	(ps2_clk         ),
-        .ps2_data       	(ps2_data        )
+        .up             	(up              ),
+        .down           	(down            ),
+        .left           	(left            ),
+        .right          	(right           )
+        // .ps2_clk        	(ps2_clk         ),
+        // .ps2_data       	(ps2_data        )
     );
     
 endmodule

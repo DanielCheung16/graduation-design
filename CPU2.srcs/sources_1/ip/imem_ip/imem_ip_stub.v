@@ -1,9 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Apr 14 18:20:48 2025
+// Date        : Mon Apr 14 17:33:13 2025
 // Host        : DESKTOP-GAA9OIO running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub E:/FPGA/Senior1/CPU2/CPU2.srcs/sources_1/ip/imem_ip/imem_ip_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top imem_ip -prefix
+//               imem_ip_ imem_ip_stub.v
 // Design      : imem_ip
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2
