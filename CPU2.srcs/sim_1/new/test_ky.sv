@@ -8,7 +8,7 @@ module test_ky(
     // Parameter Definitions
     //*****************************************************************
     parameter CLK_PERIOD_CPU = 20;           // 50MHz -> 20ns
-    parameter PS2_CLK_PERIOD = 100000;      // ~10kHz PS/2 clock
+    parameter PS2_CLK_PERIOD = 100;      // ~10kHz PS/2 clock
 
     //*****************************************************************
     // Signal Declarations
@@ -37,6 +37,8 @@ module test_ky(
     parameter DATA2 = {2'b11, 8'b0110_0110, 1'b0};//总共10bit
     parameter DATA3 = {2'b11, 8'b0000_0000, 1'b0};//总共10bit
     parameter OVER  = {2'b10, 8'b1111_0000, 1'b0};//总共10bit
+    parameter DATA_1C  = {2'b10, 8'h1c, 1'b0};//总共11bit
+    parameter DATA_2B  = {2'b10, 8'h2b, 1'b0};//总共11bit
     //------------------------封装的任务函数------------------------
     task send_ps2_data;
         input [10:0] data;  // 11-bit data frame
@@ -71,9 +73,10 @@ module test_ky(
         mmio_en  = 1'b0;
         #100;
         reset = 1'b0;
-        send_ps2_data(DATA1, 2);  // 发送 DATA2 两次
+        send_ps2_data(DATA_1C, 1);  // DATA_1C通码
         send_ps2_data(OVER,  1);  // 断码
-        send_ps2_data(DATA2, 1);  // 发送 DATA2 两次
+        send_ps2_data(DATA_1C, 1);  // DATA_1C通码
+        send_ps2_data(DATA_2B, 1);  // DATA_2B通码
         repeat(5) begin
             mmio_read(1);             //读取一次
             #(CLK_PERIOD_CPU * 5);

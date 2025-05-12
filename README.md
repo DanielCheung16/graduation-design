@@ -56,7 +56,7 @@ Vivado和Modelsim联合仿真教程：
 主要关注**CPU2.srcs**，**Init**，**waves**三个文件夹。CPU2.srcs包含约束文件*constrs_1*，testbench*sim_1*，源代码*sources_1*。Init包含给imem和dmem初始化的裸机程序，以及显存和显存控制的初始化文件。waves包含加载波形的模板。  
 
 **注1**：在修改了Init中的coe文件后需要在vivado命令行中输入：`generate_target simulation [get_ips  <your_ip_name>]`，从而更新ip核的网表。这是由于vivado并不会因为coe文件修改而从新生成ip核，这会导致仿真时仍旧使用的旧初始化数据。  
-**注2**：（*后期写报告再完善*）
+**注2**：waves如何使用参考[USE_WAVE.md](./USE_WAVE.md)
 
 
 
