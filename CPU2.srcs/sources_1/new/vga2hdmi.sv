@@ -56,7 +56,7 @@ module vga2hdmi(
         if (xy_valid && fb_valid && data_req) begin
             pixel_data = fb_data[23:0];
         end else begin
-            pixel_data = 24'h0;                 //黑色
+            pixel_data = 24'hC0C0C0;                 //黑色
         end
     end
 

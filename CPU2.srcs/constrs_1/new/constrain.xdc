@@ -1,6 +1,6 @@
 # set_property PACKAGE_PIN B19 [get_ports rst_n]
 # set_property IOSTANDARD LVCMOS12 [get_ports rst_n]
-set_property -dict { PACKAGE_PIN G19   IOSTANDARD LVCMOS12 } [get_ports { rst_n }];
+set_property -dict { PACKAGE_PIN G25   IOSTANDARD LVCMOS12 } [get_ports { rst_n }];
 
 # Clock Signal
 set_property -dict { PACKAGE_PIN AD11  IOSTANDARD LVDS     } [get_ports { clk_n }]; 
@@ -30,7 +30,7 @@ set_property -dict { PACKAGE_PIN C19   IOSTANDARD LVCMOS12 } [get_ports { right 
 set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS12 } [get_ports { up }]; #IO_L24N_T3_17 Sch=btnu
 
 # #LED
-set_property -dict { PACKAGE_PIN T28   IOSTANDARD LVCMOS33 } [get_ports { led_rst }];
+set_property -dict { PACKAGE_PIN V19   IOSTANDARD LVCMOS33 } [get_ports { led_rst }];
 
 set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { led_key[3] }]; #IO_L19N_T3_A09_D25_VREF_14 Sch=led[4]
 set_property -dict { PACKAGE_PIN V26   IOSTANDARD LVCMOS33 } [get_ports { led_key[2] }]; #IO_L16P_T2_CSI_B_14 Sch=led[5]

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri Apr 11 22:20:06 2025
+-- Date        : Fri Apr 11 22:20:05 2025
 -- Host        : DESKTOP-GAA9OIO running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               e:/FPGA/Senior1/CPU2/CPU2.srcs/sources_1/ip/vga_gen_0/vga_gen_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top vga_gen_0 -prefix
+--               vga_gen_0_ vga_gen_0_stub.vhdl
 -- Design      : vga_gen_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2

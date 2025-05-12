@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri Apr 11 22:20:07 2025
+-- Date        : Fri Apr 11 22:20:05 2025
 -- Host        : DESKTOP-GAA9OIO running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               e:/FPGA/Senior1/CPU2/CPU2.srcs/sources_1/ip/vga_gen_0/vga_gen_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top vga_gen_0 -prefix
+--               vga_gen_0_ vga_gen_0_sim_netlist.vhdl
 -- Design      : vga_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -139,8 +139,6 @@ entity vga_gen_0_blk_mem_gen_mux is
     \douta[31]_INST_0_i_1_4\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \douta[31]_INST_0_i_1_5\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end vga_gen_0_blk_mem_gen_mux;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_mux is
@@ -10482,8 +10480,6 @@ entity vga_gen_0_blk_mem_gen_prim_wrapper_init is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end vga_gen_0_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_prim_wrapper_init is
@@ -43204,8 +43200,6 @@ entity vga_gen_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end vga_gen_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_prim_width is
@@ -48278,8 +48272,6 @@ entity vga_gen_0_blk_mem_gen_generic_cstr is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end vga_gen_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_generic_cstr is
@@ -55690,8 +55682,6 @@ entity vga_gen_0_blk_mem_gen_top is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end vga_gen_0_blk_mem_gen_top;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_top is
@@ -55731,8 +55721,6 @@ entity vga_gen_0_blk_mem_gen_v8_4_2_synth is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
 end vga_gen_0_blk_mem_gen_v8_4_2_synth;
 
 architecture STRUCTURE of vga_gen_0_blk_mem_gen_v8_4_2_synth is
@@ -55973,8 +55961,6 @@ entity vga_gen_0_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_WIDTH_B of vga_gen_0_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of vga_gen_0_blk_mem_gen_v8_4_2 : entity is "kintex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of vga_gen_0_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of vga_gen_0_blk_mem_gen_v8_4_2 : entity is "yes";
 end vga_gen_0_blk_mem_gen_v8_4_2;
