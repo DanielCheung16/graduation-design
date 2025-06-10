@@ -19,7 +19,7 @@
 *~
 
 # === Simulation waveform data ===
-waves/
+
 
 # === SDK & hardware export (if unused) ===
 *.sdk/
