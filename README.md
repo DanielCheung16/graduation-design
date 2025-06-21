@@ -9,6 +9,7 @@
     - [使用平台](#使用平台)
     - [安装步骤](#安装步骤)
     - [文件目录说明](#文件目录说明)
+    - [系统框图](#系统框图)
     - [指令集架构](#指令集架构)
     - [版本控制](#版本控制)
 
@@ -59,7 +60,13 @@ Vivado和Modelsim联合仿真教程：
 **注2**：waves如何使用参考[USE_WAVE.md](./USE_WAVE.md)
 
 
+### 系统框图
+![系统框图](./pictures/Whole_System.png)  
+- CPU部分代码由Chisel转verilog生成，位于`CPU2.srcs/sources_1/imports/vsrc`
+- HDMI模块代码位于`CPU2.srcs/sources_1/imports/HDMI`
+- 其余外设代码位于`CPU2.srcs/sources_1/new`  
 
+**注**：由于实验硬件设备的限制，此处键盘使用的是按键的形式（对应的`CPU2.srcs/sources_1/new/virtual_ky.sv`。）但是作者也构建了PS2键盘的使用模式（对应的`CPU2.srcs/sources_1/new/ky.sv`。）若想要使用PS2键盘需通过git回到初始版本，并添加约束和转换模块，使得Genesys2 支持相应功能。
 
 ### 指令集架构
 请阅读[RISCV中文指令集架构手册](http://riscvbook.com/chinese/RISC-V-Reader-Chinese-v2p1.pdf)   
